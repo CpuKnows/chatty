@@ -1,1 +1,1 @@
-web: gunicorn -b 0.0.0.0:$PORT messenger.server
+web: gunicorn -b 0.0.0.0:$PORT messenger.server:app
