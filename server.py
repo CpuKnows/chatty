@@ -12,7 +12,7 @@ bot = None
 
 @app.route('/', methods=['GET'])
 def verify():
-    if request.args.get('hub.verify_token', '') == 'my_word_is_my_password':
+    if request.args.get('hub.verify_token', '') == os.environ['FB_VERIFY_TOKEN']:
         return request.args.get('hub.challenge', '')
     else:
         return 'Error, wrong validation token'
