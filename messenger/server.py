@@ -8,7 +8,7 @@ from messenger import messenger
 app = Flask(__name__)
 
 FACEBOOK_TOKEN = os.environ['FACEBOOK_TOKEN']
-bot = None
+bot = chatbot.Bot()
 
 @app.route('/', methods=['GET'])
 def verify():
@@ -27,6 +27,5 @@ def webhook():
     return "ok"
 
 if __name__ == '__main__':
-    bot = chatbot.Bot()
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
