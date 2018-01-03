@@ -2,8 +2,8 @@ import warnings
 import os
 from flask import Flask, request
 
-import chatbot
-import messenger
+from messenger import chatbot
+from messenger import messenger
 
 app = Flask(__name__)
 
