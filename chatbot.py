@@ -22,3 +22,4 @@ class Bot(object):
         s = u' '.join([to_unicode(c) for c in content])
         s = re.sub(r' ([\?,\.:!])', r'\1', s)  # Remove spaces before separators
         return s
+        
